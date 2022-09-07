@@ -10,16 +10,7 @@ using System.Windows.Forms;
 
 namespace GraphRepresentation
 {
-    class Edge {
-
-        public int asal, tujuan, bobot;
-        public Edge(int asal, int tujuan, int bobot)
-        {
-            this.asal = asal;
-            this.tujuan = tujuan;
-            this.bobot = bobot;
-        }
-    }
+    
 
     public partial class Form1 : Form
     {
@@ -33,7 +24,7 @@ namespace GraphRepresentation
         public Form1()
         {
             InitializeComponent();
-            adjMatrix = new Int32[7,7] {
+            adjMatrix = new Int32[7, 7] {
                 { 0,0,0,8,0,0,5},
                 { 5,0,8,0,0,0,0},
                 { 0,0,0,0,0,0,5},
@@ -98,6 +89,17 @@ namespace GraphRepresentation
             temp.Add(new KeyValuePair<char, int>('W', 8));
             adjList.Add('Z', temp);
 
+        }
+    }
+    class Edge
+    {
+
+        public int asal, tujuan, bobot;
+        public Edge(int asal, int tujuan, int bobot)
+        {
+            this.asal = asal;
+            this.tujuan = tujuan;
+            this.bobot = bobot;
         }
     }
 }
